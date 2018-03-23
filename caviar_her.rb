@@ -6,6 +6,12 @@ class CaviarHer
     @intersection_restaurants = @caviar_restaurants & @restauranther_restaurants
   end
 
+  def save_intersection!
+    File.open("caviar_restaurants_from_restaurantHER.txt", "w") do |f|
+      f.puts(@intersection_restaurants)
+    end
+  end
+
   def load_file(filename)
     File.readlines(filename).map &:strip
   end
