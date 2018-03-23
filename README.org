@@ -1,0 +1,16 @@
+* CaviarHer
+Finds the intersection between Caviar's and RestaurantHER's lists of restaurants near PromptWorks in Philadelphia, PA.
+
+* Usage
+To generate the list, fire up an =irb= console
+
+#+BEGIN_SRC ruby
+  load 'caviar_her'
+  ch = CaviarHer.new
+  ch.save_intersection!
+#+END_SRC
+
+
+The list will be saved in =caviar_restaurants_from_restaurantHER.txt=.
+* TODO
+- Automate import of lists of restaurants
